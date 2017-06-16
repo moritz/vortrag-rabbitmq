@@ -17,12 +17,16 @@
         font-family: 'Ubuntu Mono';
       }
       .remark-code{
+        font-size: 130%;
         background-color: rgba(100,100,100,.2);
         border: 2px solid rgba(100,100,100,.6);
         border-radius: 10px;
         display: block;
         margin: 1%;
         padding: 2%;
+      }
+      li, p {
+        font-size: 130%;
       }
     </style>
   </head>
@@ -33,7 +37,7 @@ class: center, middle
 
 # Applikationen entkoppeln mit RabbitMQ
 
-Moritz Lenz
+Moritz Lenz, moritz.lenz@gmail.com
 
 ---
 
@@ -218,6 +222,14 @@ while (my $message = $mq->get(1, 'routing-key-a')) {
 * HA: Queues repliziere
 * Sharding: Jede Queue lebt auf einem Server
 * Federeation/Shovel: Bestimmte Exchanges an andere RabbitMQ-Instanz schicken
+---
+# Erfahrungen
+* RabbitMQ sehr stabil
+* Verteilte Anwendungen entwickeln sich anders als lokale
+* I.A. gut testbar, Fehler leicht reproduzierbar
+---
+class: center, middle
+# Danke!
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
